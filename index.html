@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gianna Brescia Coinbase Application</title> <!-- Ensure this is properly set -->
+    <style>
+        /* Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Parallax Effect - Space Background */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('download.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+            transform: scale(1.1);
+            will-change: transform;
+        }
+
+        /* Particle Stars Effect */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            animation: moveStars 15s linear infinite;
+        }
+
+        .stars div {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        /* Particle Movement */
+        @keyframes moveStars {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            100% { opacity: 1; }
+        }
+
+        /* Main Content Styling */
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Text Styling */
+        .text {
+            position: absolute;
+            top: 20%;
+            width: 100%;
+            font-size: 5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #ffcc00, #ff6600);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+            animation: floatingText 5s ease-in-out infinite alternate;
+        }
+
+        .rocket-text {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff6600, #ffcc00);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            animation: slideIn 3s ease-in-out;
+        }
+
+        /* Floating Text Animation */
+        @keyframes floatingText {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for Text Slide In */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Riddle Styling */
+        .riddle {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            font-size: 1.5rem;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeInRiddle 6s ease-in-out infinite alternate;
+            max-width: 80%;
+            line-height: 1.6;
+        }
+
+        /* Fade in animation for riddle */
+        @keyframes fadeInRiddle {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .text {
+                font-size: 3rem;
+            }
+            .rocket-text {
+                font-size: 2rem;
+            }
+            .riddle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Parallax Background -->
+    <div class="background"></div>
+    
+    <!-- Stars Particles -->
+    <div class="stars">
+        <!-- Adding random particles -->
+        <div style="top: 20%; left: 30%; animation-duration: 2s; animation-delay: 1s;"></div>
+        <div style="top: 50%; left: 60%; animation-duration: 3s; animation-delay: 2s;"></div>
+        <div style="top: 80%; left: 10%; animation-duration: 1s; animation-delay: 3s;"></div>
+        <div style="top: 40%; left: 70%; animation-duration: 4s; animation-delay: 0s;"></div>
+        <!-- Add more particles as desired -->
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Main Text: Bitcoin to the Moon -->
+        <div class="text">Bitcoin to the Moon</div>
+        
+        <!-- Rocket Text: Bitcoin -->
+        <div class="rocket-text">Bitcoin</div>
+    </div>
+
+    <!-- Riddle Section -->
+    <div class="riddle">
+        <p>Design is hack. Invisibility is a superpower. Stepping into the new order. In line, we wait. A fountain of value. Welcome back, goodbye.</p>
+        <p>The valuable one is almost never the one that grabs your attention. It is the one that is silent and invisible. Once you try to lift it, you can't. It's much heavier than you think.</p>
+        <p>Like every new thing, cryptoart is reaching a plateau. A broader audience, but it's not as innovative as it once was. Don't worry, the depth increases. The giant is ready for an awakening. Like everything in the universe, moving in waves is significant and realistic.</p>
+    </div>
+</body>
+</html>
